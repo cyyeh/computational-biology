@@ -1,9 +1,5 @@
 '''
-We now have two biological problems to solve as the central goals of this chapter.
-
-1. Given a shorter ori within a longer genome, what is the hidden message indicating
-    that replication should start in this region?
-2. Given a bacterial genome, where is ori?
+Chapter 1: Hunting for Hidden Messages in Bacterial Genomes Using String Algorithms
 '''
 from collections import defaultdict
 from typing import Dict, List

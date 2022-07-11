@@ -1,4 +1,5 @@
-'''warmup: some algorithms related to numbers
+'''
+Prologue: Ancient Greek Mathematics and the Foundations of Computational Thinking
 '''
 
 def factorial(n: int):
@@ -40,6 +41,32 @@ def combination(n: int, k: int):
     499500
     '''
     return permutation(n, k) // factorial(k)
+
+
+def trivia_gcd(a: int, b: int) -> int:
+    '''
+    >>> trivia_gcd(378, 273)
+    21
+    '''
+    gcd = 1
+    m = min(a, b)
+    for i in range(1, m+1):
+        if a % i == 0 and b % i == 0:
+            gcd = i
+    return gcd
+
+
+def euclid_gcd(a: int, b: int) -> int:
+    '''
+    >>> euclid_gcd(378, 273)
+    21
+    '''
+    while a != b:
+        if a > b:
+            a = a - b
+        else:
+            b = b - a
+    return a
 
 
 if __name__ == '__main__':
