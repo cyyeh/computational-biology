@@ -1,3 +1,6 @@
+'''warmup: some algorithms related to numbers
+'''
+
 def factorial(n: int):
     '''n!
     '''
