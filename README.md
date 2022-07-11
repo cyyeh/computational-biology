@@ -1,5 +1,9 @@
 # Bioinformatics
 
+## Table of Contents
+
+- [Programming for Lovers](p4lovers)
+
 ## References
 
 - [Programming for Lovers](https://compeau.cbd.cmu.edu/programming-for-lovers/)
