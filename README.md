@@ -1,4 +1,4 @@
-# Bioinformatics
+# Computational Biology
 
 ## Table of Contents
 
