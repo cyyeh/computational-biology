@@ -13,15 +13,17 @@ def clump_finding(
     min_showing_times: int
 ) -> Set[str]:
     patterns = set()
-    n = len(text)
+    text_length = len(text)
     freq_map = defaultdict(int)
-    for i in range(n - window_length + 1):
-        window = text[i:i+window_length]
+    for i in range(text_length - window_length + 1):
         if i == 0:
-            freq_map = frequency_table(window, pattern_length, freq_map)
-            for pattern in freq_map:
-                if freq_map[pattern] >= min_showing_times:
-                    patterns.add(pattern)
+            freq_map, patterns = init_frequency_table_and_patterns(
+                text[i:i+window_length],
+                pattern_length,
+                freq_map,
+                patterns,
+                min_showing_times
+            )
         else:
             freq_map, patterns = update_frequency_table_and_patterns(
                 text,
@@ -36,16 +38,20 @@ def clump_finding(
     return patterns
 
 
-def frequency_table(
+def init_frequency_table_and_patterns(
     text: str,
-    k: int, 
-    freq_map: DefaultDict[str, int]
-) -> DefaultDict[str, int]:
-    n = len(text)
-    for i in range(n - k + 1):
-        pattern = text[i:i+k]
+    pattern_length: int, 
+    freq_map: DefaultDict[str, int],
+    patterns: Set[str],
+    min_showing_times: int
+) -> Tuple[DefaultDict[str, int], Set[str]]:
+    text_length = len(text)
+    for i in range(text_length - pattern_length + 1):
+        pattern = text[i:i+pattern_length]
         freq_map[pattern] += 1
-    return freq_map
+        if freq_map[pattern] >= min_showing_times:
+            patterns.add(pattern)
+    return freq_map, patterns
 
 
 def update_frequency_table_and_patterns(
