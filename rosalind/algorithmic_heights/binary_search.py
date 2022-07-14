@@ -1,4 +1,8 @@
+import os
 from typing import List
+
+
+BASE_PATH = f'{os.getcwd()}/rosalind/algorithmic_heights'
 
 
 def binary_search(sorted_numbers: List[int], target: int) -> int:
@@ -20,12 +24,13 @@ def binary_searches(sorted_numbers: List[int], targets: List[int]) -> List[int]:
 
 
 def test_binary_searches():
-    import os
-    BASE_PATH = f'{os.getcwd()}/rosalind/algorithmic_heights/data'
-
-    with open(f'{BASE_PATH}/bins.txt', 'r') as f:
+    with open(f'{BASE_PATH}/inputs/bins.txt', 'r') as f:
         n = int(f.readline().strip())
         m = int(f.readline().strip())
         sorted_numbers = list(map(int, f.readline().strip().split(' ')))
         targets = list(map(int, f.readline().strip().split(' ')))
-    assert ' '.join(map(str, binary_searches(sorted_numbers[:n], targets[:m]))) == '4 1 -1 -1 4 2'
+
+    with open(f'{BASE_PATH}/outputs/bins.txt', 'r') as f:
+        result = f.readline().strip()
+
+    assert ' '.join(map(str, binary_searches(sorted_numbers[:n], targets[:m]))) == result
