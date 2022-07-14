@@ -15,10 +15,10 @@ def fibonacci_number(n: int) -> int:
 
 
 def test_fibonacci_number():
-    with open(f'{BASE_PATH}/inputs/fib.txt', 'r') as f:
+    with open(f'{BASE_PATH}/inputs/fibo.txt', 'r') as f:
         n = int(f.readline().strip())
 
-    with open(f'{BASE_PATH}/outputs/fib.txt', 'r') as f:
+    with open(f'{BASE_PATH}/outputs/fibo.txt', 'r') as f:
         result = int(f.readline().strip())
 
     assert fibonacci_number(n) == result
