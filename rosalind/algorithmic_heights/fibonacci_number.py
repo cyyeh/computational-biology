@@ -10,7 +10,7 @@ def fibonacci_number(n: int) -> int:
 
 def test_fibonacci_number():
     import os
-    BASE_PATH = f'{os.getcwd()}/rosalind/algorithmic_heights'
+    BASE_PATH = f'{os.getcwd()}/rosalind/algorithmic_heights/data'
 
     with open(f'{BASE_PATH}/fib.txt', 'r') as f:
         n = int(f.readline().strip())

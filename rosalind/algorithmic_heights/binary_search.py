@@ -21,7 +21,7 @@ def binary_searches(sorted_numbers: List[int], targets: List[int]) -> List[int]:
 
 def test_binary_searches():
     import os
-    BASE_PATH = f'{os.getcwd()}/rosalind/algorithmic_heights'
+    BASE_PATH = f'{os.getcwd()}/rosalind/algorithmic_heights/data'
 
     with open(f'{BASE_PATH}/bins.txt', 'r') as f:
         n = int(f.readline().strip())
