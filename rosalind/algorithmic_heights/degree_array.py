@@ -17,8 +17,8 @@ def degree_array(nodes: int, edge_list_data: List[str]) -> List[int]:
 
 def test_degree_array():
     with open(f'{BASE_PATH}/inputs/deg.txt', 'r') as f:
-        nodes, _ = map(int, f.readline().strip().split(' ')) # nodes, edges
-        edge_list_data = f.read().splitlines()
+        nodes, edges = map(int, f.readline().strip().split(' '))
+        edge_list_data = f.read().splitlines()[:edges]
 
     with open(f'{BASE_PATH}/outputs/deg.txt', 'r') as f:
         result = f.readline().strip()
