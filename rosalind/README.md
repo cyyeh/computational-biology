@@ -1,6 +1,7 @@
 # Rosalind
 
-references
+reference: https://rosalind.info/
+
 - [Algorithmic Heights](algorithmic_heights)
 - [Bioinformatics Stronghold](bioinformatics_stronghold)
 - [Bioinformatics Armory](bioinformatics_armory)
