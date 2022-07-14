@@ -4,6 +4,7 @@
 
 - [Programming for Lovers](p4lovers)
 - [Bioinformatics](bioinformatics)
+- [Rosalind](rosalind)
 ## References
 
 - [Programming for Lovers](https://compeau.cbd.cmu.edu/programming-for-lovers/)
