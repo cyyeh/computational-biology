@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Programming for Lovers](p4lovers)
-- [Bioinformatics](bioinformatics_algos)
+- [Bioinformatics](bioinformatics)
 ## References
 
 - [Programming for Lovers](https://compeau.cbd.cmu.edu/programming-for-lovers/)
