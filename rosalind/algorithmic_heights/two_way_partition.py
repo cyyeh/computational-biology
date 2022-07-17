@@ -39,11 +39,3 @@ def test_two_way_partition():
     partitioned, i = two_way_partition(numbers[:n])
     assert all(num <= partitioned[i] for num in partitioned[:i])
     assert all(num > partitioned[i] for num in partitioned[i+1:])
-
-
-with open(f'{BASE_PATH}/rosalind_par.txt', 'r') as f:
-    n = int(f.readline().strip())
-    numbers = list(map(int, f.readline().strip().split(' ')))
-
-partitioned, i = two_way_partition(numbers[:n])
-print(' '.join(map(str, partitioned)))
